@@ -19,7 +19,7 @@ const ResultsTable: React.FC<ResultsTableProps> = ({ results }) => {
     },
   ];
 
-  return <Table dataSource={results} columns={columns} rowKey="email" pagination={false} />;
+  return <Table style={{ width: "90%" }} dataSource={results} columns={columns} pagination={false} />;
 };
 
 export default ResultsTable;

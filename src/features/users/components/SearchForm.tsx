@@ -4,10 +4,9 @@ import InputMask from "react-input-mask";
 
 interface SearchFormProps {
   onFinish: (values: { email: string; number?: string }) => void;
-  loading: boolean;
 }
 
-const SearchForm: React.FC<SearchFormProps> = ({ onFinish, loading }) => {
+const SearchForm: React.FC<SearchFormProps> = ({ onFinish }) => {
   const [form] = Form.useForm();
 
   return (
@@ -30,14 +29,14 @@ const SearchForm: React.FC<SearchFormProps> = ({ onFinish, loading }) => {
             fontSize: "14px",
             lineHeight: "1.5714285714285714",
             color: "rgba(0, 0, 0, 0.85)",
-            backgroundColor: "rgb(232, 240, 254)",
+            backgroundColor: "",
             transition: "all 0.2s",
           }}
           mask="99-99-99"
         />
       </Form.Item>
       <Form.Item>
-        <Button type="primary" htmlType="submit" loading={loading}>
+        <Button type="primary" htmlType="submit">
           Submit
         </Button>
       </Form.Item>
