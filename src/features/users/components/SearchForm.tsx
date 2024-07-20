@@ -4,7 +4,6 @@ import InputMask from "react-input-mask";
 
 interface SearchFormProps {
   onFinish: (values: { email: string; number?: string }) => void;
-  loading: boolean;
 }
 
 const SearchForm: React.FC<SearchFormProps> = ({ onFinish }) => {
